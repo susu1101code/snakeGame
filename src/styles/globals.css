@@ -3,31 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --empty: white;
+  --snake: green;
+  --food: red;
+  --wall:black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--empty));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.board-grid__container{
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows:  repeat(10, 50px);
+  padding:10px;
+}
+.body-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+.grid-item{
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+.food{
+  background-color:var(--food);
+}
+.snake{
+  background-color:var(--snake);
+}
+.wall{
+  background-color:var(--wall);
 }
