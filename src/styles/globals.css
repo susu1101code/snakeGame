@@ -2,41 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --empty: white;
-  --snake: green;
-  --food: red;
-  --wall:black;
-}
 
 
-body {
-  background: rgb(var(--empty));
-}
 
-.board-grid__container{
-  display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows:  repeat(10, 50px);
-  padding:10px;
-}
-.body-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  flex-direction: column;
-}
-.grid-item{
-  border: 1px solid rgba(0, 0, 0, 1);
-}
-.food{
-  background-color:var(--food);
-}
-.snake{
-  background-color:var(--snake);
-}
-.wall{
-  background-color:var(--wall);
-}
+
